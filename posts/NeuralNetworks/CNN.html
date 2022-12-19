@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Thinam Tamang">
-<meta name="dcterms.date" content="2021-12-06">
 
-<title>Welcome to my blog! - Fundamentals of Image Classification</title>
+<title>Welcome to my blog! - Fundamentals of CNNs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,10 +114,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Fundamentals of Image Classification</h1>
+      <h1 class="title">Fundamentals of CNNs</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">computer vision</div>
-                <div class="quarto-category">image classification</div>
+                <div class="quarto-category">machine learning</div>
+                <div class="quarto-category">convolutional neural network</div>
               </div>
                   </div>
   </div>
@@ -133,12 +132,6 @@ ul.task-list li input[type="checkbox"] {
             </div>
     </div>
       
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">December 6, 2021</p>
-      </div>
-    </div>
     
       
     </div>
@@ -154,30 +147,46 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="./ComputerVision.jpg" class="img-fluid"></p>
-<section id="image-classification" class="level3">
-<h3 class="anchored" data-anchor-id="image-classification">Image Classification</h3>
-<p>1. <strong>Image Classification</strong> is the task of using computer vision and machine learning algorithms to extract meaning from an image. It is the task of assigning a label to an image from a predefined set of categories.</p>
-<p>2. <strong>Semantic Gap</strong> is the difference between how a human perceives the contents of an image versus how an image can be represented in a way a computer can understand the process.</p>
-<p>3. <strong>Feature Extraction</strong> is the process of taking an input image, applying an algorithm, and obtaining a feature vector that quantifies the image.</p>
-<p>4. The common supervised learning algorithms include Logistic Regression, Support Vector Machines, Random Forests, and Artificial Neural Networks.</p>
-<p>5. <strong>Unsupervised Learning</strong> which is also called self-taught learning has no labels associated with the input data and thus we cannot correct our model if it makes an incorrect prediction.</p>
-<p>6. <strong>K-Nearest Neighbor</strong> classifier doesn’t actually learn anything, but it directly relies on the distance between feature vectors.</p>
-<p>7. A learning model that summarizes data with a set of parameters of fixed size which is independent of the number of training examples is called a <strong>Parametric Model</strong>. No matter how much data you throw at the parametric model, it won’t change its mind about how many parameters it needs. – <em>Russell and Norvig.</em></p>
-<p>8. <strong>Parameterization</strong> is the process of defining the necessary parameters of a given model. In machine learning, parameterization involves in four key components: data, a scoring function, a loss function, and weights and biases.</p>
-<p>9. The scoring function accepts the data as an input and maps the data to class labels. A loss function quantifies how well our predicted class labels agree with our ground-truth labels.</p>
-<p>10. <strong>Softmax Classifiers</strong> give probabilities for each class label while hinge loss gives the margin scores.</p>
-<p>11. The <strong>gradient descent</strong> method is an iterative optimization algorithm that operates over a loss landscape also called and optimization surface. Also, <strong>gradient descent</strong> refers to the process of attempting to optimize the parameters for low loss and high classification accuracy via an iterative process of taking a step in the direction that minimize loss.</p>
+<p><img src="./AI.jpg" class="img-fluid"></p>
+<section id="neural-networks" class="level2">
+<h2 class="anchored" data-anchor-id="neural-networks">Neural Networks</h2>
+<p>Neural networks are the building blocks of deep learning systems. A system is called a neural network if it contains a labeled, directed graph structure where each node in the graph performs some computation.</p>
 <p><img src="./image1.png" class="img-fluid"></p>
-<p>Figure: The <strong>naive loss</strong> visualized as a 2D plot.</p>
-<p>As shown in figure, the loss landscape has many peaks and valleys. Each peak is a local maximum that represents very high regions of loss. The local maximum with largest loss across the entire loss landscape is the global maximum. Similarly, the local minimum represents many small regions of loss. The local minimum with the smallest loss across the loss landscape is the global minimum.</p>
-<p>12. An optimization algorithm may not be guaranteed to arrive at even a local minimum in a reasonable amount of time, but it often finds a very low value of the loss function quickly enough to be useful. – <em>Goodfellow</em>.</p>
-<p>13. <strong>Stochastic Gradient Descent (SGD)</strong> is a simple modification to the standard gradient descent algorithm that computes the gradient and updates the weight matrix on small batches of training data, rather than the entire training set.</p>
-<p>14. <strong>Momentum</strong> is a method used to accelerate <strong>Stochastic Gradient Descent (SGD),</strong> enabling it to learn faster by focusing on dimensions whose gradient point in the same direction. <strong>Nesterov’s Acceleration</strong> can be conceptualized as a corrective update to the momentum which lets us obtain an approximate idea of where our parameters will be after the update.</p>
-<p>13. Many strategies used in machine learning are explicitly designed to reduce the test error, possibly at the expense of increased training error. These strategies are collectively known as <strong>Regularization</strong>. – <em>Goodfellow</em>.</p>
+<p>Figure: A simple neural network that takes the weighted sum of inputs <em>x</em> and weights <em>w</em> which is then passed through the activation function to determine the output.</p>
+</section>
+<section id="activation-functions" class="level2">
+<h2 class="anchored" data-anchor-id="activation-functions">Activation Functions</h2>
 <p><img src="./image2.png" class="img-fluid"></p>
-<p>Figure: An example of model fitting.</p>
-<p>The figure presents an example of underfitting (orange line), overfitting (blue line), and generalizing (green line). The goal of deep learning classifiers is to obtain these types of “green functions” that fit the training data nicely, but avoid overfitting. Regularization helps to obtain the desired fit.</p>
+<p><strong>Sigmoid Function</strong> is continuous and differentiable everywhere. It is symmetric around the y-axis. The outputs of the sigmoid are not zero centered. Saturated neurons essentially kill the gradient, since the delta of the gradient will be extremely small.</p>
+<p><strong>Rectified Linear Unit (ReLU)</strong> is zero for negative inputs but increases linearly for positive inputs. The ReLU function is not saturable and is also extremely computationally efficient. ReLU is the most popular activation function used in deep learning and has stronger biological motivations.</p>
+</section>
+<section id="feedforward-neural-networks" class="level2">
+<h2 class="anchored" data-anchor-id="feedforward-neural-networks">Feedforward Neural Networks</h2>
+<p>The neural networks architecture in which a connection between nodes is only allowed from nodes in layer <em>i</em> to nodes in layer <em>i + 1</em>, with no backward or inter-layer connections are called <strong>feedforward neural networks</strong>. When feedforward neural networks include feedback connections i.e.&nbsp;output connections that feed back into the inputs, are called <strong>recurrent neural networks</strong>.</p>
+</section>
+<section id="backpropagation" class="level2">
+<h2 class="anchored" data-anchor-id="backpropagation">Backpropagation</h2>
+<p><strong>Backpropagation</strong> is a generalization of the gradient descent algorithms that is specifically used to train multi-layer feedforward networks. The backpropagation algorithm consists of two phases:</p>
+<ol type="1">
+<li><p>The forward pass where we pass our inputs through the network to obtain our output classifications.</p></li>
+<li><p>The backward pass i.e.&nbsp;weight update phase where we compute the gradient of the loss function and use the information to iteratively apply the chain rule to update the weights in neural networks.</p></li>
+</ol>
+<p>The activation functions inside the network are differentiable, allowing the chain rule to be applied. Any layers inside the network that require updates to their weights and parameters must be compatible with backpropagation.</p>
+<p><strong>One Hot Encoding</strong> is the process of transforming integer labels into vector labels, where the index in the vector for label is set to 1 and 0 otherwise.</p>
+</section>
+<section id="convolutions" class="level2">
+<h2 class="anchored" data-anchor-id="convolutions">Convolutions</h2>
+<p><strong>Convolutions</strong> are one of the most critical, fundamental building-blocks in computer vision and image processing. <strong>Convolution</strong> is an element-wise multiplication of two matrices followed by a sum.</p>
+</section>
+<section id="convolutional-layers" class="level2">
+<h2 class="anchored" data-anchor-id="convolutional-layers">Convolutional Layers</h2>
+<p>It accepts an input volume of size <em>W<sub>input </sub></em> <em>X H<sub>input</sub> X D<sub>input </sub></em>.The input sizes are normally square, so it’s common to see <em>W<sub>input</sub> = H<sub>input </sub></em>. The number of filters <em>K</em> controls the depth of the output volume. The output of the convolutional layer is <em>W<sub>output</sub> X H<sub>output </sub></em> <em>X D<sub>output </sub></em>, where:</p>
+<ol type="1">
+<li><p><em>W<sub>output</sub> = ((W<sub>input</sub> - F + 2P)/S) + 1.</em></p></li>
+<li><p><em>H<sub>output</sub> = ((H<sub>input</sub> - F + 2P)/S) + 1.</em></p></li>
+<li><p><em>D<sub>output</sub> = K</em></p></li>
+</ol>
+<p>Here, <em>K</em> is the number of filters, which when used for convolution yields receptive field <em>F</em>. <em>S</em> is the stride and <em>P</em> is the amount of zero-padding.</p>
 
 
 </section>

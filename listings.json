@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/NeuralNetworks/CNN.html",
       "/posts/ClassifyImage/Fundamentals.html",
       "/posts/NLP/NLP.html"
     ]

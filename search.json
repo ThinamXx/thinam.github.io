@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Welcome to my blog!",
     "section": "",
-    "text": "Fundamentals of Image Classification\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 6, 2021\n\n\nThinam Tamang\n\n\n\n\n\n\n  \n\n\n\n\nJourney of 66DaysOfData in Natural Language Processing\n\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nOct 15, 2021\n\n\nThinam Tamang\n\n\n\n\n\n\nNo matching items"
+    "text": "Fundamentals of CNNs\n\n\n\n\n\n\n\nmachine learning\n\n\nconvolutional neural network\n\n\n\n\n\n\n\n\n\n\n\nThinam Tamang\n\n\n\n\n\n\n  \n\n\n\n\nFundamentals of Image Classification\n\n\n\n\n\n\n\ncomputer vision\n\n\nimage classification\n\n\n\n\n\n\n\n\n\n\n\nDec 6, 2021\n\n\nThinam Tamang\n\n\n\n\n\n\n  \n\n\n\n\nJourney of 66DaysOfData in Natural Language Processing\n\n\n\n\n\n\n\nnatural language processing\n\n\n\n\n\n\n\n\n\n\n\nOct 15, 2021\n\n\nThinam Tamang\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/ClassifyImage/Fundamentals.html",
@@ -19,6 +19,48 @@
     "title": "Fundamentals of Image Classification",
     "section": "",
     "text": "Image Classification\n1. Image Classification is the task of using computer vision and machine learning algorithms to extract meaning from an image. It is the task of assigning a label to an image from a predefined set of categories.\n2. Semantic Gap is the difference between how a human perceives the contents of an image versus how an image can be represented in a way a computer can understand the process.\n3. Feature Extraction is the process of taking an input image, applying an algorithm, and obtaining a feature vector that quantifies the image.\n4. The common supervised learning algorithms include Logistic Regression, Support Vector Machines, Random Forests, and Artificial Neural Networks.\n5. Unsupervised Learning which is also called self-taught learning has no labels associated with the input data and thus we cannot correct our model if it makes an incorrect prediction.\n6. K-Nearest Neighbor classifier doesn’t actually learn anything, but it directly relies on the distance between feature vectors.\n7. A learning model that summarizes data with a set of parameters of fixed size which is independent of the number of training examples is called a Parametric Model. No matter how much data you throw at the parametric model, it won’t change its mind about how many parameters it needs. – Russell and Norvig.\n8. Parameterization is the process of defining the necessary parameters of a given model. In machine learning, parameterization involves in four key components: data, a scoring function, a loss function, and weights and biases.\n9. The scoring function accepts the data as an input and maps the data to class labels. A loss function quantifies how well our predicted class labels agree with our ground-truth labels.\n10. Softmax Classifiers give probabilities for each class label while hinge loss gives the margin scores.\n11. The gradient descent method is an iterative optimization algorithm that operates over a loss landscape also called and optimization surface. Also, gradient descent refers to the process of attempting to optimize the parameters for low loss and high classification accuracy via an iterative process of taking a step in the direction that minimize loss.\n\nFigure: The naive loss visualized as a 2D plot.\nAs shown in figure, the loss landscape has many peaks and valleys. Each peak is a local maximum that represents very high regions of loss. The local maximum with largest loss across the entire loss landscape is the global maximum. Similarly, the local minimum represents many small regions of loss. The local minimum with the smallest loss across the loss landscape is the global minimum.\n12. An optimization algorithm may not be guaranteed to arrive at even a local minimum in a reasonable amount of time, but it often finds a very low value of the loss function quickly enough to be useful. – Goodfellow.\n13. Stochastic Gradient Descent (SGD) is a simple modification to the standard gradient descent algorithm that computes the gradient and updates the weight matrix on small batches of training data, rather than the entire training set.\n14. Momentum is a method used to accelerate Stochastic Gradient Descent (SGD), enabling it to learn faster by focusing on dimensions whose gradient point in the same direction. Nesterov’s Acceleration can be conceptualized as a corrective update to the momentum which lets us obtain an approximate idea of where our parameters will be after the update.\n13. Many strategies used in machine learning are explicitly designed to reduce the test error, possibly at the expense of increased training error. These strategies are collectively known as Regularization. – Goodfellow.\n\nFigure: An example of model fitting.\nThe figure presents an example of underfitting (orange line), overfitting (blue line), and generalizing (green line). The goal of deep learning classifiers is to obtain these types of “green functions” that fit the training data nicely, but avoid overfitting. Regularization helps to obtain the desired fit."
+  },
+  {
+    "objectID": "posts/NeuralNetworks/CNN.html#neural-networks",
+    "href": "posts/NeuralNetworks/CNN.html#neural-networks",
+    "title": "Fundamentals of CNNs",
+    "section": "Neural Networks",
+    "text": "Neural Networks\nNeural networks are the building blocks of deep learning systems. A system is called a neural network if it contains a labeled, directed graph structure where each node in the graph performs some computation.\n\nFigure: A simple neural network that takes the weighted sum of inputs x and weights w which is then passed through the activation function to determine the output."
+  },
+  {
+    "objectID": "posts/NeuralNetworks/CNN.html#activation-functions",
+    "href": "posts/NeuralNetworks/CNN.html#activation-functions",
+    "title": "Fundamentals of CNNs",
+    "section": "Activation Functions",
+    "text": "Activation Functions\n\nSigmoid Function is continuous and differentiable everywhere. It is symmetric around the y-axis. The outputs of the sigmoid are not zero centered. Saturated neurons essentially kill the gradient, since the delta of the gradient will be extremely small.\nRectified Linear Unit (ReLU) is zero for negative inputs but increases linearly for positive inputs. The ReLU function is not saturable and is also extremely computationally efficient. ReLU is the most popular activation function used in deep learning and has stronger biological motivations."
+  },
+  {
+    "objectID": "posts/NeuralNetworks/CNN.html#feedforward-neural-networks",
+    "href": "posts/NeuralNetworks/CNN.html#feedforward-neural-networks",
+    "title": "Fundamentals of CNNs",
+    "section": "Feedforward Neural Networks",
+    "text": "Feedforward Neural Networks\nThe neural networks architecture in which a connection between nodes is only allowed from nodes in layer i to nodes in layer i + 1, with no backward or inter-layer connections are called feedforward neural networks. When feedforward neural networks include feedback connections i.e. output connections that feed back into the inputs, are called recurrent neural networks."
+  },
+  {
+    "objectID": "posts/NeuralNetworks/CNN.html#backpropagation",
+    "href": "posts/NeuralNetworks/CNN.html#backpropagation",
+    "title": "Fundamentals of CNNs",
+    "section": "Backpropagation",
+    "text": "Backpropagation\nBackpropagation is a generalization of the gradient descent algorithms that is specifically used to train multi-layer feedforward networks. The backpropagation algorithm consists of two phases:\n\nThe forward pass where we pass our inputs through the network to obtain our output classifications.\nThe backward pass i.e. weight update phase where we compute the gradient of the loss function and use the information to iteratively apply the chain rule to update the weights in neural networks.\n\nThe activation functions inside the network are differentiable, allowing the chain rule to be applied. Any layers inside the network that require updates to their weights and parameters must be compatible with backpropagation.\nOne Hot Encoding is the process of transforming integer labels into vector labels, where the index in the vector for label is set to 1 and 0 otherwise."
+  },
+  {
+    "objectID": "posts/NeuralNetworks/CNN.html#convolutions",
+    "href": "posts/NeuralNetworks/CNN.html#convolutions",
+    "title": "Fundamentals of CNNs",
+    "section": "Convolutions",
+    "text": "Convolutions\nConvolutions are one of the most critical, fundamental building-blocks in computer vision and image processing. Convolution is an element-wise multiplication of two matrices followed by a sum."
+  },
+  {
+    "objectID": "posts/NeuralNetworks/CNN.html#convolutional-layers",
+    "href": "posts/NeuralNetworks/CNN.html#convolutional-layers",
+    "title": "Fundamentals of CNNs",
+    "section": "Convolutional Layers",
+    "text": "Convolutional Layers\nIt accepts an input volume of size Winput  X Hinput X Dinput .The input sizes are normally square, so it’s common to see Winput = Hinput . The number of filters K controls the depth of the output volume. The output of the convolutional layer is Woutput X Houtput  X Doutput , where:\n\nWoutput = ((Winput - F + 2P)/S) + 1.\nHoutput = ((Hinput - F + 2P)/S) + 1.\nDoutput = K\n\nHere, K is the number of filters, which when used for convolution yields receptive field F. S is the stride and P is the amount of zero-padding."
   },
   {
     "objectID": "posts/NLP/NLP.html#books",
