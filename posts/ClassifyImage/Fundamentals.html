@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Thinam Tamang">
+<meta name="dcterms.date" content="2021-12-06">
 
-<title>Welcome to my blog! -</title>
+<title>Welcome to my blog! - Fundamentals of Image Classification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,49 +60,19 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Welcome to my blog!</span>
     </a>
   </div>
@@ -112,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="../../about.html">
  <span class="menu-text">Thinam Tamang</span></a>
   </li>  
   <li class="nav-item compact">
@@ -142,101 +112,76 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Fundamentals of Image Classification</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">news</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Thinam Tamang </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 6, 2021</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<p><img src="./ComputerVision.jpg" class="img-fluid"></p>
+<section id="image-classification" class="level3">
+<h3 class="anchored" data-anchor-id="image-classification">Image Classification</h3>
+<p>1. <strong>Image Classification</strong> is the task of using computer vision and machine learning algorithms to extract meaning from an image. It is the task of assigning a label to an image from a predefined set of categories.</p>
+<p>2. <strong>Semantic Gap</strong> is the difference between how a human perceives the contents of an image versus how an image can be represented in a way a computer can understand the process.</p>
+<p>3. <strong>Feature Extraction</strong> is the process of taking an input image, applying an algorithm, and obtaining a feature vector that quantifies the image.</p>
+<p>4. The common supervised learning algorithms include Logistic Regression, Support Vector Machines, Random Forests, and Artificial Neural Networks.</p>
+<p>5. <strong>Unsupervised Learning</strong> which is also called self-taught learning has no labels associated with the input data and thus we cannot correct our model if it makes an incorrect prediction.</p>
+<p>6. <strong>K-Nearest Neighbor</strong> classifier doesn’t actually learn anything, but it directly relies on the distance between feature vectors.</p>
+<p>7. A learning model that summarizes data with a set of parameters of fixed size which is independent of the number of training examples is called a <strong>Parametric Model</strong>. No matter how much data you throw at the parametric model, it won’t change its mind about how many parameters it needs. – <em>Russell and Norvig.</em></p>
+<p>8. <strong>Parameterization</strong> is the process of defining the necessary parameters of a given model. In machine learning, parameterization involves in four key components: data, a scoring function, a loss function, and weights and biases.</p>
+<p>9. The scoring function accepts the data as an input and maps the data to class labels. A loss function quantifies how well our predicted class labels agree with our ground-truth labels.</p>
+<p>10. <strong>Softmax Classifiers</strong> give probabilities for each class label while hinge loss gives the margin scores.</p>
+<p>11. The <strong>gradient descent</strong> method is an iterative optimization algorithm that operates over a loss landscape also called and optimization surface. Also, <strong>gradient descent</strong> refers to the process of attempting to optimize the parameters for low loss and high classification accuracy via an iterative process of taking a step in the direction that minimize loss.</p>
+<p><img src="./image1.png" class="img-fluid"></p>
+<p>Figure: The <strong>naive loss</strong> visualized as a 2D plot.</p>
+<p>As shown in figure, the loss landscape has many peaks and valleys. Each peak is a local maximum that represents very high regions of loss. The local maximum with largest loss across the entire loss landscape is the global maximum. Similarly, the local minimum represents many small regions of loss. The local minimum with the smallest loss across the loss landscape is the global minimum.</p>
+<p>12. An optimization algorithm may not be guaranteed to arrive at even a local minimum in a reasonable amount of time, but it often finds a very low value of the loss function quickly enough to be useful. – <em>Goodfellow</em>.</p>
+<p>13. <strong>Stochastic Gradient Descent (SGD)</strong> is a simple modification to the standard gradient descent algorithm that computes the gradient and updates the weight matrix on small batches of training data, rather than the entire training set.</p>
+<p>14. <strong>Momentum</strong> is a method used to accelerate <strong>Stochastic Gradient Descent (SGD),</strong> enabling it to learn faster by focusing on dimensions whose gradient point in the same direction. <strong>Nesterov’s Acceleration</strong> can be conceptualized as a corrective update to the momentum which lets us obtain an approximate idea of where our parameters will be after the update.</p>
+<p>13. Many strategies used in machine learning are explicitly designed to reduce the test error, possibly at the expense of increased training error. These strategies are collectively known as <strong>Regularization</strong>. – <em>Goodfellow</em>.</p>
+<p><img src="./image2.png" class="img-fluid"></p>
+<p>Figure: An example of model fitting.</p>
+<p>The figure presents an example of underfitting (orange line), overfitting (blue line), and generalizing (green line). The goal of deep learning classifiers is to obtain these types of “green functions” that fit the training data nicely, but avoid overfitting. Regularization helps to obtain the desired fit.</p>
 
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1638728100000" data-listing-file-modified-sort="1671437926997" data-listing-reading-time-sort="3.11">
-<div class="thumbnail">
-<p><a href="./posts/ClassifyImage/Fundamentals.html"> <img src="./posts/ClassifyImage/ComputerVision.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/ClassifyImage/Fundamentals.html">
-<h3 class="no-anchor listing-title">
-Fundamentals of Image Classification
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<a href="./posts/ClassifyImage/Fundamentals.html">
-<div class="listing-description">
-1. <strong>Image Classification</strong> is the task of using computer…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/ClassifyImage/Fundamentals.html">
-<div class="listing-date">
-Dec 6, 2021
-</div>
-<div class="listing-author">
-Thinam Tamang
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="news,analysis" data-listing-date-sort="1634235300000" data-listing-file-modified-sort="1671436618222" data-listing-reading-time-sort="61.38">
-<div class="thumbnail">
-<p><a href="./posts/NLP/NLP.html"> <img src="./posts/NLP/Images/NLP2.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/NLP/NLP.html">
-<h3 class="no-anchor listing-title">
-Journey of 66DaysOfData in Natural Language Processing
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<a href="./posts/NLP/NLP.html">
-<div class="listing-description">
-<strong>Day1 of 66DaysOfData!</strong> - <strong>Natural Language Processing:</strong> Natural Language Processing is a field of Linguistics, Computer Science, and Artificial Intelligence concerned with the interactions between Computers and Human language…<strong></strong>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/NLP/NLP.html">
-<div class="listing-date">
-Oct 15, 2021
-</div>
-<div class="listing-author">
-Thinam Tamang
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
