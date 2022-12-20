@@ -2,46 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/about.html</loc>
-    <lastmod>2022-12-20T08:15:23.474Z</lastmod>
+    <lastmod>2022-12-20T08:20:41.546Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/index.html</loc>
-    <lastmod>2022-12-20T08:15:23.905Z</lastmod>
+    <lastmod>2022-12-20T08:20:42.034Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ThinamXx.github.io/thinam.github.io/posts/Attention/Transformer.html</loc>
+    <lastmod>2022-12-20T08:20:42.407Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/ClassifyImage/Fundamentals.html</loc>
-    <lastmod>2022-12-20T08:15:24.188Z</lastmod>
+    <lastmod>2022-12-20T08:20:42.692Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/CNNs/CNNs.html</loc>
-    <lastmod>2022-12-20T08:15:24.472Z</lastmod>
+    <lastmod>2022-12-20T08:20:42.992Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/DataEng/DataEngineering.html</loc>
-    <lastmod>2022-12-20T08:15:24.757Z</lastmod>
+    <lastmod>2022-12-20T08:20:43.315Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/Dataset/DataPreparation.html</loc>
-    <lastmod>2022-12-20T08:15:25.035Z</lastmod>
+    <lastmod>2022-12-20T08:20:43.601Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/Machine/MachineLearning.html</loc>
-    <lastmod>2022-12-20T08:15:25.305Z</lastmod>
+    <lastmod>2022-12-20T08:20:43.872Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/NeuralNetworks/CNN.html</loc>
-    <lastmod>2022-12-20T08:15:25.583Z</lastmod>
+    <lastmod>2022-12-20T08:20:44.154Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/NLP/NLP.html</loc>
-    <lastmod>2022-12-20T08:15:26.613Z</lastmod>
+    <lastmod>2022-12-20T08:20:45.154Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/Pattern/Pattern.html</loc>
-    <lastmod>2022-12-20T08:15:26.890Z</lastmod>
+    <lastmod>2022-12-20T08:20:45.439Z</lastmod>
   </url>
   <url>
-    <loc>https://ThinamXx.github.io/thinam.github.io/posts/WordVectors/2022-10-15-WordVectors.html</loc>
-    <lastmod>2022-12-20T08:15:27.178Z</lastmod>
+    <loc>https://ThinamXx.github.io/thinam.github.io/posts/WordVectors/WordVectors.html</loc>
+    <lastmod>2022-12-20T08:20:45.722Z</lastmod>
   </url>
 </urlset>
