@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Thinam Tamang">
-<meta name="dcterms.date" content="2022-01-22">
+<meta name="dcterms.date" content="2022-02-10">
 
-<title>Welcome to my blog! - Convolutional Neural Networks Architectures</title>
+<title>Welcome to my blog! - Pattern Recognition &amp; ML</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -115,9 +116,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Convolutional Neural Networks Architectures</h1>
+      <h1 class="title">Pattern Recognition &amp; ML</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">convolutional neural networks</div>
+                <div class="quarto-category">machine learning</div>
+                <div class="quarto-category">pattern recognition</div>
               </div>
                   </div>
   </div>
@@ -135,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 22, 2022</p>
+        <p class="date">February 10, 2022</p>
       </div>
     </div>
     
@@ -153,44 +155,45 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="./Neural-Network.png" class="img-fluid"></p>
-<section id="convolutional-neural-networks" class="level2">
-<h2 class="anchored" data-anchor-id="convolutional-neural-networks">Convolutional Neural Networks</h2>
-<p>The five architectures of CNNs that have been <em>pre-trained</em> on the ImageNet dataset and, are present in the <em>Keras</em> library are mentioned below:</p>
-<ol type="1">
-<li><p>VGG16</p></li>
-<li><p>VGG19</p></li>
-<li><p>ResNet50</p></li>
-<li><p>Inception V3</p></li>
-<li><p>Xception</p></li>
-</ol>
+<p><img src="./Pattern.jpg" class="img-fluid"></p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The field of <strong>pattern recognition</strong> is concerned with the automatic discovery of regularities in data through the use of computer algorithms and with the use of these regularities to take actions such as classifying the data into different categories. <strong>Generalization,</strong> the ability to categorize correctly new examples that differ from those used for training is a central goal in <strong>pattern recognition.</strong></p>
+<p>Applications in which the training data comprises examples of the input vectors with their corresponding target vectors are known as <strong>supervised learning</strong> problems. The cases such as the digit recognition, in which the aim is to assign each input vector to one of a finite number of discrete categories, are called <strong>classification.</strong> If the desired output consists of one or more continuous variables, then the task is called <strong>regression.</strong></p>
+<p>The pattern recognition problems in which the training data consists of a set of input vectors x without any corresponding target values are called <strong>unsupervised learning</strong> problems. The goal in such <strong>unsupervised learning</strong> problems may be to discover groups of similar examples within the data, where it is called <strong>clustering</strong>, or to determine the distribution of data within the input space, known as <strong>density estimation,</strong> or to project the data from a high-dimensional space down to two or three dimensions for the purpose of visualization.</p>
+<p>The technique of <strong>reinforcement learning</strong> is concerned with the problem of finding suitable actions to take in a given situation in order to maximize a reward. A general feature of <strong>reinforcement learning</strong> is the trade-off between <strong>exploration,</strong> in which the system tries out new kinds of actions to see how effective they are, and <strong>exploitation,</strong> in which the system makes use of actions that are known to yield a high reward.</p>
 </section>
-<section id="parameterized-learning" class="level2">
-<h2 class="anchored" data-anchor-id="parameterized-learning">Parameterized Learning</h2>
-<p>The point of parameterized learning is to define a machine learning model that can learn patterns from our input data during training time, but have the testing process be must faster and to obtain a model that can be defined using a small number of parameters that can easily represent the network regardless of training size.</p>
+<section id="probability-theory" class="level2">
+<h2 class="anchored" data-anchor-id="probability-theory">Probability Theory</h2>
+<p>Probability theory provides a consistent framework for the quantification and manipulation of uncertainty. When combined with decision theory, it allows us to make optimal predictions given all the information available to us, even though that information may be incomplete or ambiguous.</p>
 </section>
-<section id="vgg16-vgg19" class="level2">
-<h2 class="anchored" data-anchor-id="vgg16-vgg19">VGG16 &amp; VGG19</h2>
-<p><img src="./CNNs/image1.png" class="img-fluid"></p>
-<p>Fig: A visualization of the VGG architecture.</p>
-<p>The figure presents the visualization of the VGG architecture. Images with <em>224 x 224 x3</em> dimensions are inputted to the network. Convolutions filters of only <em>3 x 3</em> are then applied with more convolutions stacked on top of each other prior to max pooling operations deeper in the architecture.</p>
-<p>The VGG network architecture was introduced by Simonyan and Zisserman in their 2014 paper, <em>Very Deep Convolutional Networks for Large Scale Image Recognition.</em> The VGG family of networks is characterized by using only <em>3 x 3</em> convolutional layers stacked on top of each other in increasing depth. The volume size is reduced by max pooling. Two fully-connected layers are then followed by a softmax classifier.</p>
+<section id="the-rules-of-probability" class="level2">
+<h2 class="anchored" data-anchor-id="the-rules-of-probability">The Rules of Probability</h2>
+<ul>
+<li><p>Sum Rule: <em>p(X) =</em> <span class="math inline">\(\\sum\_{Y}^{}{p(X,\\ Y)}\)</span></p></li>
+<li><p>Product Rule: <em>p(X, Y) = p(Y / X)p(X)</em></p></li>
+</ul>
+<p>Here, <em>p(X, Y)</em> is a <strong>joint probability</strong> and is verbalized as “the probability of X and Y”. Similarly, the quantity <em>p(Y/X)</em> is a <strong>conditional probability</strong> and is verbalized as “the probability of Y given X”, where the quantity <em>p(X)</em> is a <strong>marginal probability</strong> and is verbalized as “the probability of X”.</p>
 </section>
-<section id="resnet" class="level2">
-<h2 class="anchored" data-anchor-id="resnet">ResNet</h2>
-<p><img src="./CNNs/image2.png" class="img-fluid"></p>
-<p>Fig: <strong>Left:</strong> The original residual module. <strong>Right:</strong> The updated residual module using pre-activation.</p>
-<p>The <strong>ResNet</strong> module was introduced by He et al.&nbsp;in their 2015 paper, <em>Deep Residual Learning for Image Recognition.</em> The ResNet architecture has become a seminal work in the deep learning literature, demonstrating that extremely deep networks can be trained using standard SGD through the use of residual modules. Accuracy can be obtained by updating the residual module to use identity mappings.</p>
+<section id="bayes-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="bayes-theorem">Bayes’ Theorem</h2>
+<p>From the product rule, together with the symmetry property <em>p(X, Y) = p(Y, X)</em>, we obtain the following relationship between conditional probabilities which is called <strong>Bayes’ theorem</strong> which plays a central role in pattern recognition and machine learning. Using the sum rule, the denominator in Bayes’ theorem can be expressed in terms of the quantities appearing in the numerator as being the normalization constant required ensuring that the sum of the conditional probability on the left-hand side over all values of <em>Y</em> equals one.</p>
+<ul>
+<li><p><em>p(Y / X) =</em> <span class="math inline">\(\\frac{p\\left( \\frac{X}{Y} \\right)p(X)}{p(X)}\)</span></p></li>
+<li><p><em>p(X) =</em> <span class="math inline">\(\\sum\_{Y}^{}{p\\left( \\frac{X}{Y} \\right)p(Y)}\)</span></p></li>
+</ul>
 </section>
-<section id="inception-v3" class="level2">
-<h2 class="anchored" data-anchor-id="inception-v3">Inception V3</h2>
-<p><img src="./CNNs/image3.png" class="img-fluid"></p>
-<p>Fig: The original Inception module used in GoogLeNet.</p>
-<p>The Inception module was introduced by Szegedy et al.&nbsp;in their 2014 paper, <em>Going Deeper with Convolutions.</em> The goal of the Inception module is to act as multi-level feature extractor by computing <em>1 x 1, 3 x 3,</em> and <em>5 x 5</em> convolutions within the same module of the network. The output of these filters are then stacked along the channel dimension before being fed into the next layer in the network. The original incarnation of this architecture was called <strong>GoogLeNet.</strong></p>
+<section id="model-selection" class="level2">
+<h2 class="anchored" data-anchor-id="model-selection">Model Selection</h2>
+<p>In the maximum likelihood approach, the performance on the training set is not a good indicator of predictive performance on unseen data due to the problem of over-fitting. If data is plentiful, the one approach is simply to use some of the available data to train a range of models, or a given model with a range of values for its complexity parameters, and then to compare them on independent data, sometimes called a <strong>validation set,</strong> and select the one having the best predictive performance. However, in many applications, the data for training and testing will be limited, and in order to build good models, we wish to use as much of the available data as possible for training. If the validation set is small, it will give a relatively noisy estimate of predictive performance. One solution to this problem is to use <strong>cross-validation.</strong> This allows a proportion <em>(S – 1) / S</em> of the available data to be used for training while making use of all of the data to assess performance.</p>
 </section>
-<section id="xception" class="level2">
-<h2 class="anchored" data-anchor-id="xception">Xception</h2>
-<p>Xception module was introduced by Francois Chollet in their 2016 paper, <em>Xception: Deep Learning with Depthwise Separable Convolutions.</em> Xception is an extension to the Inception architecture which replaces the standard Inception modules with depthwise separable convolutions.</p>
+<section id="decision-theory" class="level2">
+<h2 class="anchored" data-anchor-id="decision-theory">Decision Theory</h2>
+<p>If we have an input vector <strong>x</strong> together with a corresponding vector <strong>t</strong> of target variables, our goal is to predict <strong>t</strong> given a new value for <strong>x.</strong> For regression problems, <strong>t</strong> will comprise continuous variables, whereas for classification problems, <strong>t</strong> will represent class labels.</p>
+</section>
+<section id="minimizing-loss-function" class="level2">
+<h2 class="anchored" data-anchor-id="minimizing-loss-function">Minimizing Loss Function</h2>
+<p>Loss function is also called a cost function, which is a single, overall measure of loss incurred in taking any of the available decisions or actions. Our goal is then to minimize the total loss incurred.</p>
 
 
 </section>
