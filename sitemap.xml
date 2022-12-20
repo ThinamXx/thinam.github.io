@@ -2,30 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/about.html</loc>
-    <lastmod>2022-12-20T07:39:01.506Z</lastmod>
+    <lastmod>2022-12-20T08:00:53.941Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/index.html</loc>
-    <lastmod>2022-12-20T07:39:01.983Z</lastmod>
+    <lastmod>2022-12-20T08:00:54.384Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/ClassifyImage/Fundamentals.html</loc>
-    <lastmod>2022-12-20T07:39:02.314Z</lastmod>
+    <lastmod>2022-12-20T08:00:54.723Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/CNNs/CNNs.html</loc>
-    <lastmod>2022-12-20T07:39:02.625Z</lastmod>
+    <lastmod>2022-12-20T08:00:55.009Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ThinamXx.github.io/thinam.github.io/posts/Dataset/DataPreparation.html</loc>
+    <lastmod>2022-12-20T08:00:55.307Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ThinamXx.github.io/thinam.github.io/posts/Machine/MachineLearning.html</loc>
+    <lastmod>2022-12-20T08:00:55.605Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/NeuralNetworks/CNN.html</loc>
-    <lastmod>2022-12-20T07:39:02.962Z</lastmod>
+    <lastmod>2022-12-20T08:00:55.876Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/NLP/NLP.html</loc>
-    <lastmod>2022-12-20T07:39:04.668Z</lastmod>
+    <lastmod>2022-12-20T08:00:57.016Z</lastmod>
   </url>
   <url>
     <loc>https://ThinamXx.github.io/thinam.github.io/posts/Pattern/Pattern.html</loc>
-    <lastmod>2022-12-20T07:39:05.098Z</lastmod>
+    <lastmod>2022-12-20T08:00:57.334Z</lastmod>
   </url>
 </urlset>
