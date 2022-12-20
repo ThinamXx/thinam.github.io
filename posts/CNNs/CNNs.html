@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Thinam Tamang">
-<meta name="dcterms.date" content="2021-12-31">
+<meta name="dcterms.date" content="2022-01-22">
 
-<title>Welcome to my blog! - Fundamentals of CNNs</title>
+<title>Welcome to my blog! - Convolutional Neural Networks Architectures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,10 +115,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Fundamentals of CNNs</h1>
+      <h1 class="title">Convolutional Neural Networks Architectures</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">machine learning</div>
-                <div class="quarto-category">convolutional neural network</div>
+                <div class="quarto-category">convolutional neural networks</div>
               </div>
                   </div>
   </div>
@@ -136,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 31, 2021</p>
+        <p class="date">January 22, 2022</p>
       </div>
     </div>
     
@@ -154,46 +153,44 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="./AI.jpg" class="img-fluid"></p>
-<section id="neural-networks" class="level2">
-<h2 class="anchored" data-anchor-id="neural-networks">Neural Networks</h2>
-<p><strong>Neural networks</strong> are the building blocks of deep learning systems. A system is called a neural network if it contains a labeled, directed graph structure where each node in the graph performs some computation.</p>
-<p><img src="./image1.png" class="img-fluid"></p>
-<p>Figure: A simple neural network that takes the weighted sum of inputs <em>x</em> and weights <em>w</em> which is then passed through the activation function to determine the output.</p>
-</section>
-<section id="activation-functions" class="level2">
-<h2 class="anchored" data-anchor-id="activation-functions">Activation Functions</h2>
-<p><img src="./image2.png" class="img-fluid"></p>
-<p><strong>Sigmoid Function</strong> is continuous and differentiable everywhere. It is symmetric around the y-axis. The outputs of the sigmoid are not zero centered. Saturated neurons essentially kill the gradient, since the delta of the gradient will be extremely small.</p>
-<p><strong>Rectified Linear Unit (ReLU)</strong> is zero for negative inputs but increases linearly for positive inputs. The ReLU function is not saturable and is also extremely computationally efficient. ReLU is the most popular activation function used in deep learning and has stronger biological motivations.</p>
-</section>
-<section id="feedforward-neural-networks" class="level2">
-<h2 class="anchored" data-anchor-id="feedforward-neural-networks">Feedforward Neural Networks</h2>
-<p>The neural networks architecture in which a connection between nodes is only allowed from nodes in layer <em>i</em> to nodes in layer <em>i + 1</em>, with no backward or inter-layer connections are called <strong>feedforward neural networks</strong>. When feedforward neural networks include feedback connections i.e.&nbsp;output connections that feed back into the inputs, are called <strong>recurrent neural networks</strong>.</p>
-</section>
-<section id="backpropagation" class="level2">
-<h2 class="anchored" data-anchor-id="backpropagation">Backpropagation</h2>
-<p><strong>Backpropagation</strong> is a generalization of the gradient descent algorithms that is specifically used to train multi-layer feedforward networks. The backpropagation algorithm consists of two phases:</p>
+<p><img src="https://github.com/ThinamXx/thinam.ai/blob/master/images/Neural-Network.png?raw=true" class="img-fluid"></p>
+<section id="convolutional-neural-networks" class="level2">
+<h2 class="anchored" data-anchor-id="convolutional-neural-networks">Convolutional Neural Networks</h2>
+<p>The five architectures of CNNs that have been <em>pre-trained</em> on the ImageNet dataset and, are present in the <em>Keras</em> library are mentioned below:</p>
 <ol type="1">
-<li><p>The forward pass where we pass our inputs through the network to obtain our output classifications.</p></li>
-<li><p>The backward pass i.e.&nbsp;weight update phase where we compute the gradient of the loss function and use the information to iteratively apply the chain rule to update the weights in neural networks.</p></li>
+<li><p>VGG16</p></li>
+<li><p>VGG19</p></li>
+<li><p>ResNet50</p></li>
+<li><p>Inception V3</p></li>
+<li><p>Xception</p></li>
 </ol>
-<p>The activation functions inside the network are differentiable, allowing the chain rule to be applied. Any layers inside the network that require updates to their weights and parameters must be compatible with backpropagation.</p>
-<p><strong>One Hot Encoding</strong> is the process of transforming integer labels into vector labels, where the index in the vector for label is set to 1 and 0 otherwise.</p>
 </section>
-<section id="convolutions" class="level2">
-<h2 class="anchored" data-anchor-id="convolutions">Convolutions</h2>
-<p><strong>Convolutions</strong> are one of the most critical, fundamental building-blocks in computer vision and image processing. <strong>Convolution</strong> is an element-wise multiplication of two matrices followed by a sum.</p>
+<section id="parameterized-learning" class="level2">
+<h2 class="anchored" data-anchor-id="parameterized-learning">Parameterized Learning</h2>
+<p>The point of parameterized learning is to define a machine learning model that can learn patterns from our input data during training time, but have the testing process be must faster and to obtain a model that can be defined using a small number of parameters that can easily represent the network regardless of training size.</p>
 </section>
-<section id="convolutional-layers" class="level2">
-<h2 class="anchored" data-anchor-id="convolutional-layers">Convolutional Layers</h2>
-<p>It accepts an input volume of size <em>W<sub>input </sub></em> <em>X H<sub>input</sub> X D<sub>input </sub></em>.The input sizes are normally square, so it’s common to see <em>W<sub>input</sub> = H<sub>input </sub></em>. The number of filters <em>K</em> controls the depth of the output volume. The output of the convolutional layer is <em>W<sub>output</sub> X H<sub>output </sub></em> <em>X D<sub>output </sub></em>, where:</p>
-<ol type="1">
-<li><p><em>W<sub>output</sub> = ((W<sub>input</sub> - F + 2P)/S) + 1.</em></p></li>
-<li><p><em>H<sub>output</sub> = ((H<sub>input</sub> - F + 2P)/S) + 1.</em></p></li>
-<li><p><em>D<sub>output</sub> = K</em></p></li>
-</ol>
-<p>Here, <em>K</em> is the number of filters, which when used for convolution yields receptive field <em>F</em>. <em>S</em> is the stride and <em>P</em> is the amount of zero-padding.</p>
+<section id="vgg16-vgg19" class="level2">
+<h2 class="anchored" data-anchor-id="vgg16-vgg19">VGG16 &amp; VGG19</h2>
+<p><img src="https://github.com/ThinamXx/thinam.ai/blob/master/images/CNNs/image1.png?raw=true" class="img-fluid"></p>
+<p>Fig: A visualization of the VGG architecture.</p>
+<p>The figure presents the visualization of the VGG architecture. Images with <em>224 x 224 x3</em> dimensions are inputted to the network. Convolutions filters of only <em>3 x 3</em> are then applied with more convolutions stacked on top of each other prior to max pooling operations deeper in the architecture.</p>
+<p>The VGG network architecture was introduced by Simonyan and Zisserman in their 2014 paper, <em>Very Deep Convolutional Networks for Large Scale Image Recognition.</em> The VGG family of networks is characterized by using only <em>3 x 3</em> convolutional layers stacked on top of each other in increasing depth. The volume size is reduced by max pooling. Two fully-connected layers are then followed by a softmax classifier.</p>
+</section>
+<section id="resnet" class="level2">
+<h2 class="anchored" data-anchor-id="resnet">ResNet</h2>
+<p><img src="https://github.com/ThinamXx/thinam.ai/blob/master/images/CNNs/image2.png?raw=true" class="img-fluid"></p>
+<p>Fig: <strong>Left:</strong> The original residual module. <strong>Right:</strong> The updated residual module using pre-activation.</p>
+<p>The <strong>ResNet</strong> module was introduced by He et al.&nbsp;in their 2015 paper, <em>Deep Residual Learning for Image Recognition.</em> The ResNet architecture has become a seminal work in the deep learning literature, demonstrating that extremely deep networks can be trained using standard SGD through the use of residual modules. Accuracy can be obtained by updating the residual module to use identity mappings.</p>
+</section>
+<section id="inception-v3" class="level2">
+<h2 class="anchored" data-anchor-id="inception-v3">Inception V3</h2>
+<p><img src="https://github.com/ThinamXx/thinam.ai/blob/master/images/CNNs/image3.png?raw=true" class="img-fluid"></p>
+<p>Fig: The original Inception module used in GoogLeNet.</p>
+<p>The Inception module was introduced by Szegedy et al.&nbsp;in their 2014 paper, <em>Going Deeper with Convolutions.</em> The goal of the Inception module is to act as multi-level feature extractor by computing <em>1 x 1, 3 x 3,</em> and <em>5 x 5</em> convolutions within the same module of the network. The output of these filters are then stacked along the channel dimension before being fed into the next layer in the network. The original incarnation of this architecture was called <strong>GoogLeNet.</strong></p>
+</section>
+<section id="xception" class="level2">
+<h2 class="anchored" data-anchor-id="xception">Xception</h2>
+<p>Xception module was introduced by Francois Chollet in their 2016 paper, <em>Xception: Deep Learning with Depthwise Separable Convolutions.</em> Xception is an extension to the Inception architecture which replaces the standard Inception modules with depthwise separable convolutions.</p>
 
 
 </section>
